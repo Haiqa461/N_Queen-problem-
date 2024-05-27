@@ -1,4 +1,3 @@
-
 # N Queen Problem Solver
 
 ## Overview
@@ -7,9 +6,9 @@ This project provides a solution to the N Queen problem using data structures in
 
 ## Features
 
-- Solve the N Queen problem for any size N.
-- Efficient algorithms to find solutions.
-- Detailed output showing each step of the solution process.
+- Solve the N Queen problem for board sizes greater than or equal to 4.
+- Visual representation of the board and queen placements.
+- Step-by-step output displaying each move and backtracking steps.
 
 ## Getting Started
 
@@ -37,28 +36,54 @@ This project provides a solution to the N Queen problem using data structures in
 
 ### Usage
 
-To run the solver, simply execute the compiled program with the desired board size N:
+To run the solver, simply execute the compiled program:
 ```sh
-./n_queen_solver [N]
+./n_queen_solver
 ```
-Replace `[N]` with the size of the board you want to solve. For example, to solve the 8-queen problem:
-```sh
-./n_queen_solver 8
-```
+You will be prompted to enter the number of queens (N). The program will display the board state at each step and indicate when backtracking occurs.
 
 ### Example
 
 ```sh
-$ ./n_queen_solver 8
-Solution for 8-Queens problem:
-. . Q . . . . .
-. . . . Q . . .
-. Q . . . . . .
-. . . . . . Q .
-Q . . . . . . .
-. . . Q . . . .
-. . . . . Q . .
-. . . . . . . Q
+$ ./n_queen_solver
+Welcome to the N-Queens Solver!
+Please enter the number of queens (greater than or equals to 4 for meaningful solutions): 8
+
+Initial empty board:
+   0  1  2  3  4  5  6  7 
+ 0 .  .  .  .  .  .  .  .  
+ 1 .  .  .  .  .  .  .  .  
+ 2 .  .  .  .  .  .  .  .  
+ 3 .  .  .  .  .  .  .  .  
+ 4 .  .  .  .  .  .  .  .  
+ 5 .  .  .  .  .  .  .  .  
+ 6 .  .  .  .  .  .  .  .  
+ 7 .  .  .  .  .  .  .  .  
+
+Current Board State:
+   0  1  2  3  4  5  6  7 
+ 0 Q  .  .  .  .  .  .  .  
+ 1 .  .  .  .  .  .  .  .  
+ 2 .  .  .  .  .  .  .  .  
+ 3 .  .  .  .  .  .  .  .  
+ 4 .  .  .  .  .  .  .  .  
+ 5 .  .  .  .  .  .  .  .  
+ 6 .  .  .  .  .  .  .  .  
+ 7 .  .  .  .  .  .  .  .  
+
+...
+
+Solution exists:
+Current Board State:
+   0  1  2  3  4  5  6  7 
+ 0 .  .  Q  .  .  .  .  .  
+ 1 .  .  .  .  Q  .  .  .  
+ 2 .  Q  .  .  .  .  .  .  
+ 3 .  .  .  .  .  .  Q  .  
+ 4 Q  .  .  .  .  .  .  .  
+ 5 .  .  .  Q  .  .  .  .  
+ 6 .  .  .  .  .  Q  .  .  
+ 7 .  .  .  .  .  .  .  Q  
 ```
 
 ## Project Structure
@@ -95,7 +120,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - Inspired by the classic N Queen problem.
 - Thanks to the contributors and the open-source community.
-
----
-
-Feel free to modify this template according to your specific project details and requirements.
